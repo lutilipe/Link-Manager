@@ -1,0 +1,20 @@
+{
+    "account.signup.password_confirmation.any.required": "Password confirmation is required.",
+    "account.signup.password_confirmation.any.only": "Password confirmation doesn't match Password.",
+    "account.signup.password.string.empty": "Password is required.",
+    "account.signup.password.string.pattern.base": "Password must contain between 3 and 30 characters and include numbers and letters.",
+    "account.signup.email_exists": "Email already exists.",
+    "account.signup.email.string.empty": "Email is required.",
+    "account.signup.email.string.email": "Invalid email.",
+    "account.signup.success": "Registration conclude.",
+    
+    "account.signin.password_confirmation.any.required": "Password confirmation is required.",
+    "account.signin.password.string.empty": "Password is required.",
+    "account.signin.password.string.pattern.base": "Invalid email or password.",
+    "account.signin.invalid": "Invalid email or password.",
+    "account.signin.email.string.empty": "Email is required.",
+    "account.signin.success": "Logged in.",
+
+    "account.link.success": "Link updated with success.",
+    "account.link.success.delete": "Link removed with success."
+}

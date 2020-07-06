@@ -12,6 +12,7 @@
     &:hover,
     &:focus,
     &:active {
+        color: inherit;
         background: none;
         box-shadow: none;
     }

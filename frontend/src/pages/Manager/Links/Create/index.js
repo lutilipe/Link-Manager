@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Layout from '../../../Layouts/Manager'
 import { getFormData } from '../../../../helpers/form'
-import { linkCreate } from '../../../../actions/LinkActions'
+import { linkCreate, linkClear } from '../../../../actions/LinkActions'
 
-const CreateLink = ({ link, linkCreate }) => {
+const CreateLink = ({ link, linkCreate, linkClear }) => {
+  useEffect(() => {
+    return () => { linkClear() }
+  }, [linkClear])
+
   const submitHandler = e => {
     const data = getFormData(e)
     linkCreate(data)
@@ -52,4 +56,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { linkCreate })(CreateLink)
+export default connect(mapStateToProps, { linkCreate, linkClear })(CreateLink)

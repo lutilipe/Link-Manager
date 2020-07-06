@@ -1,21 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { signOut } from '../../../actions/AccountActions'
-import { Redirect, useHistory } from 'react-router-dom'
+import { Redirect, NavLink } from 'react-router-dom'
 
 const Layout = ({ children, signOut, account }) => {
-  const history = useHistory()
 
   const signOutHandler = e => {
     e.preventDefault()
 
     signOut()
-  }
-
-  const backHandler = e => {
-    e.preventDefault()
-
-    history.push('/manager/link')
   }
 
   if (!account) {
@@ -27,7 +20,7 @@ const Layout = ({ children, signOut, account }) => {
       <nav className="navbar navbar-expand-lg bg-primary text-light">
         <div className="container d-flex w-100 justify-content-between">
           <div>
-          <button className="btn btn-clear" onClick={backHandler}>Back</button>
+          <NavLink to="/manager/link">Back</NavLink>
           </div>
           <dir className="text-center">
             <strong>Links</strong>
